@@ -1,0 +1,29 @@
+L'analyse a été réalisée avec l'outil **Nmap** afin de vérifier l'état du port **22 (SSH)** de la machine ayant l'adresse IP **10.0.2.15**. La commande utilisée est :
+
+```bash
+nmap -p 22 10.0.2.15
+```
+
+Dans un premier temps, le résultat obtenu était :
+
+```text
+PORT   STATE     SERVICE
+22/tcp filtered  ssh
+```
+
+Ce résultat indique que le port **22** est **filtered**. Cela signifie que Nmap n'a pas pu déterminer si le port était ouvert ou fermé, car les paquets envoyés étaient filtrés. Cette situation peut être due à un pare-feu ou au fait que le service SSH n'était pas encore accessible.
+
+Le service SSH a ensuite été démarré avec la commande :
+
+```bash
+sudo systemctl start ssh
+```
+
+Un nouveau scan a alors été effectué avec la même commande Nmap, ce qui a donné le résultat suivant :
+
+```text
+PORT   STATE SERVICE
+22/tcp open  ssh
+```
+
+Cette fois, le port **22** apparaît comme **open**, ce qui signifie qu'un service SSH est en écoute sur ce port et accepte les connexions. Ce changement de résultat montre que l'état d'un port dépend de la disponibilité du service associé. Le scan de ports permet ainsi de vérifier si un service réseau est accessible sur une machine.
