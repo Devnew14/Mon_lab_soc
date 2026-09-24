@@ -43,6 +43,16 @@ Rooms orientées Blue Team :
 
 Objectif : renforcer ma méthodologie d’investigation et ma compréhension des attaques.
 
+### **👑 Root Me**
+Pratique de l’escalade de privilèges et des environnements vulnérables :
+- challenges Linux / Windows
+- obtention d’accès root / administrateur
+- compréhension des vulnérabilités système courantes
+- renforcement des bonnes pratiques de sécurité
+
+Objectif : comprendre les mécanismes d’élévation de privilèges afin de mieux détecter et prévenir les compromissions dans un contexte SOC.
+
+
 ### **🔍 Wireshark**
 Analyses de captures réseau (PCAP) :
 - filtrage avancé  
